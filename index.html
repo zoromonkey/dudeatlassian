@@ -53,7 +53,7 @@ body {
             position: fixed;
             bottom: 10px;
             right: 10px;
-            color: white;
+            color: Black;
             font-size: 16px;
         }
 
@@ -168,7 +168,7 @@ body {
     // Get references to elements
     var popupContainer = document.getElementById("popup-container");
     var counterElement = document.getElementById("loadCount");
-    var loadCount = 0;
+    var loadCount = localStorage.getItem("loadCount") || 0;
 
     // Function to open the pop-up
     function openPopup() {
@@ -178,15 +178,15 @@ body {
         popupContainer.style.display = "none";
     }
       // Function to update and display the counter
-    function updateCounter() {
+function updateCounter() {
         loadCount++;
         counterElement.textContent = loadCount;
+        // Store the updated visit count in local storage
+        localStorage.setItem("loadCount", loadCount);
     }
+  updateCounter();
 
-setTimeout(function () {
-        openPopup();
-        updateCounter();
-    }, 10000);
+setTimeout(openPopup, 10000);
 </script>
 
   
