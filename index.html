@@ -40,6 +40,15 @@ body {
             border: 2px solid white;
             border-radius: 10px;
         }
+          /* Style for the close button */
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
 
 /* Create three equal columns that floats next to each other */
 .column {
@@ -139,7 +148,8 @@ body {
   <h2><p>This is the foot of the page, please visit us down here often. &#128517; Dude Atlassian is a highly skilled Ninja so please be carefull!!</p></h2>
 </div>
 
-<div class="popup-container" id="popup-container">
+<div class="popup-container" id="popup-container"> 
+  <div class="close-button" onclick="closePopup()">X</div>
     <img src="https://github.com/zoromonkey/dudeatlassian/blob/main/MicrosoftTeams-image%20(10).png?raw=true" alt="Pop-up Image" class="popup-image" id="popup-image" width="800" height="300">
 </div>
 
@@ -153,8 +163,11 @@ body {
     function openPopup() {
         popupContainer.style.display = "flex";
     }
+  function closePopup() {
+        popupContainer.style.display = "none";
+    }
 
-setTimeout(openPopup, 5000);
+setTimeout(openPopup, 10000);
 </script>
 
   
