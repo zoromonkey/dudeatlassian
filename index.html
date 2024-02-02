@@ -1,154 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/uikit.js"></script>
-    <script src="js/uikit-icons.js"></script>
-
-    <title>Portfolio</title>
-</head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.button {
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 15px 15px;
-  cursor: pointer;
+* {
+  box-sizing: border-box;
 }
 
-.button1 {background-color: #008CBA;} /* Blue */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+.header {
+  background-color:#000080;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: White;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  color: white; /* You can replace 'red' with any valid color value */
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column2 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+  font-weight: bold;
+  font-size: 20px;
+  color: black; /* You can replace 'red' with any valid color value */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
 </style>
+</head>
 <body>
-<!-- Navigation Bar -->
-    <nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-visible@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    
-    <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo uk-light"> Venky the Benky & Dhanush the destroyer. </a>
-    </div>
-    <div class="uk-navbar-right">
 
-        <ul class="uk-navbar-nav uk-light">
-            <li><a class="uk-button-text uk-text-capitalize" href="#about" uk-scroll>About Us? Why?</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="#projects" uk-scroll>Projects</a></li>
-            <li><a class="uk-button-text uk-text-capitalize" href="mailto:" uk-scroll>Dont Contact us</a></li>
+<div class="footer"><h2>
+<p>This website is created by &#128526; Dude Atlassian for creating awareness among people about Atlassian in comical sense. </p></h2></div>
 
-        </ul>
-
-    </div>
-</nav>
-<!-- Navigation Bar Ends  -->
-
-<!-- Navigation Bar Mobile -->
-<nav class="uk-navbar-container uk-margin-small-left uk-margin-small-right uk-hidden@m uk-margin-xlarge-left uk-margin-xlarge-right" uk-navbar uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky">
-    
-    <div class="uk-navbar-left">
-        <a href="" class="uk-navbar-item uk-logo uk-light"> Venky & Dhanush</a>
-    </div>
-    <div class="uk-navbar-right">
-
-        <ul class="uk-navbar-nav uk-light">
-            <li><button uk-toggle="target: #offcanvas-nav" type="button" uk-navbar-toggle-icon></button></li>
-
-        </ul>
-
-    </div>
-</nav>
-<!-- Change This -->
-<div id="offcanvas-nav" uk-offcanvas="overlay: true">
-    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
-
-        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-            <li class="uk-active"><a href="#" uk-scroll> Our House</a></li>
-            <li class="uk-active"><a href="#about" uk-scroll> My life?</a></li>
-            <li class="uk-active"><a href="#projects" uk-scroll> our Projects </a></li>
-            <li class="uk-active"><a href="mailto:psych@bahaoi.com"> Dont contact us please</a></li> <!--- change to ur email-->
-
-        </ul>
-
-
-
-
-    </div>
+<div class="header">
+  <h2>&#128526; Dude Atlassian!!</h2>
 </div>
 
-<!-- Navigation Bar Mobile Ends -->
-<!-- Home -->
-<section class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-    <h1 class="uk-margin-xlarge-left uk-light uk-text-left uk-margin-xlarge-right">I'm Venky the benky, a superengineer, photo designer, and photographer. <br> And I am Dhanush the destroyer, a superduper engineer, swimmer and gamer.</h1>
-    <a href="#about" class="uk-margin-xlarge-left uk-text-capitalize uk-button uk-button-secondary" uk-scroll>About Us? why?</a>
-    <br>
-    <br>
-    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f4fcdcf2-99e8-4d6c-b560-1b1691949a74/d5v221y-0339070e-8706-46ea-9142-1a76a2ab99ea.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y0ZmNkY2YyLTk5ZTgtNGQ2Yy1iNTYwLTFiMTY5MTk0OWE3NFwvZDV2MjIxeS0wMzM5MDcwZS04NzA2LTQ2ZWEtOTE0Mi0xYTc2YTJhYjk5ZWEuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.kfyyKK0FfjilT-6KEvnjGwr1Sny7Tnncv4_d44sbzmI" alt="pointy" width="180" height="250">
-    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">
-        <button class="button button1">Hey YOU. Click on this button Man</button>
-    </a>
-
-</section>
-
-<!-- Home Ends -->
-<br>
-
-
-<hr class="uk-margin-xlarge-top uk-margin-xlarge-left uk-margin-xlarge-right">
-
-<!-- About Me -->
-<section id="about" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-<h3 class="uk-margin-xlarge-left uk-light"> YOU want to know About US?, buzz off</h3>
-<!-- Change here to ur paragraph -->
-<h3 class="uk-margin-xlarge-left uk-light"> Psych, There is nothing about us that you need to know;</h3>
-<p class="uk-margin-xlarge-left uk-margin-xlarge-right"> </p>
-<a href="https://offandonagain.org/" class="uk-margin-xlarge-left uk-light uk-button-text" uk-icon="instagram"></a> &nbsp;<a href="https://offandonagain.org/" class="uk-light uk-button-text" uk-icon="dribbble"></a> &nbsp;<a href="https://offandonagain.org/" class="uk-button-text uk-light" uk-icon="github"></a> &nbsp;<a href="https://offandonagain.org/" class=" uk-light uk-button-text" uk-icon="linkedin"></a>
-
-<!-- About Me Ends -->
-
-
-
-
-</section>
-
-<!-- Projects Section -->
-<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
-<section id="projects" class="uk-margin-small-left uk-margin-small-right uk-margin-xlarge-top uk-margin-xlarge-bottom">
-<h3 class="uk-margin-xlarge-left uk-light">Projects</h3>
-<p class="uk-margin-xlarge-left">Projects we are working on</p>
-
-<div class="uk-margin-xlarge-left uk-margin-xlarge-right">
-    <!-- Change all of this to ur projects -->
-    <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-        <h4> Moon Govt. </h4>
-        <p> JS for govt office in moon</p>
-        <a class="uk-button-text uk-text-decoration-none" href="">
-            <span uk-icon="icon: link">
-            </span> 
-        <a href="https://offandonagain.org/" target="_blank"> CLICK Here for project</a></a>
-        </div>
-        <div class="uk-margin uk-card uk-card-secondary uk-card-body ">
-            <h4> Aliens are smart too.</h4>
-            <p> Website building for an alien client.</p>
-            <h4> Bourhoull </h4>
-            <p> Engineering their entire softwares </p>
-            <a class="uk-button-text uk-text-decoration-none" href="">
-                <span uk-icon="icon: link">
-                </span>  </a>
-            <a href="https://offandonagain.org/" target="_blank"> CLICK Here for project</a></a>
-        </div>
-
-
-    <br>
-
-
-</section>
-<hr class="uk-margin-xlarge-left uk-margin-xlarge-right">
+<div class="row">
+  <div class="column2" style="background-color: Cyan;">Jira? is that you?
+  <img src="https://github.com/zoromonkey/dudeatlassianmeme/blob/main/meme1.PNG?raw=true" alt="pointy" width="240" height="250">
 </div>
-<!-- Projects Section Ends -->
-    
+  <div class="column" style="background-color:#151B54;">Confluence? try it dude!
+  <img src="https://i.imgflip.com/8efnno.jpg" title="made at imgflip.com" width="240" height="250"></div>
+  <div class="column2" style="background-color:Lime">What? whats a Trello bud?<img src="https://i.imgflip.com/8efnxc.jpg" title="made at imgflip.com" width="240" height="250">
+</div>
+
+<div class="footer">
+  <h2><p>This is the foot of the page, please visit us down here often. &#128517;</p></h2>
+</div>
+
 </body>
 </html>
