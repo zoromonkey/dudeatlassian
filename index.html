@@ -49,6 +49,13 @@ body {
             font-size: 20px;
             cursor: pointer;
         }
+          #counter {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            color: white;
+            font-size: 16px;
+        }
 
 /* Create three equal columns that floats next to each other */
 .column {
@@ -153,12 +160,15 @@ body {
   <div class="close-button" onclick="closePopup()">X</div>
     <img src="https://github.com/zoromonkey/dudeatlassian/blob/main/MicrosoftTeams-image%20(10).png?raw=true" alt="Pop-up Image" class="popup-image" id="popup-image" width="800" height="300">
 </div>
-
+<!-- Counter display -->
+<div id="counter">Website loaded: <span id="loadCount">0</span> times</div>
 <script>
     // JavaScript to handle pop-up functionality on page load
 
     // Get references to elements
     var popupContainer = document.getElementById("popup-container");
+    var counterElement = document.getElementById("loadCount");
+    var loadCount = 0;
 
     // Function to open the pop-up
     function openPopup() {
@@ -167,8 +177,16 @@ body {
   function closePopup() {
         popupContainer.style.display = "none";
     }
+      // Function to update and display the counter
+    function updateCounter() {
+        loadCount++;
+        counterElement.textContent = loadCount;
+    }
 
-setTimeout(openPopup, 10000);
+setTimeout(function () {
+        openPopup();
+        updateCounter();
+    }, 10000);
 </script>
 
   
